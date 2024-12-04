@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 
+https://w7.pngwing.com/pngs/682/579/png-transparent-earth-globe-world-map-blue-earth-earth-illustration-blue-globe-photography-thumbnail.png
+
+
+https://w7.pngwing.com/pngs/13/396/png-transparent-earth-graphy-planet-earth-globe-photography-world.png
+
+
+#FDF1F29E
+
+
+*/
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/stars-night-sky-outer-space-with-full-moon_445280-1543.jpg);
+    background-size: cover;
+
+}
+.earth{
+    width: 300px;
+    height: 300px;
+    /* background-image: url(https://www.surfertoday.com/images/stories/physical-world-map-sample.jpg); */
+    background-image: url(physical-world-map-sample.jpg);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-size: 700px 100%;
+    box-shadow: inset 0px 0px 5px #FDF1F29E , inset 30px 0px 50px #000;
+    animation: rotate-earth 10s linear infinite alternate;
+}
+
+@-webkit-keyframes rotate-earth{
+    0%{
+        background-position-x: 0px;
+        /* transform: scale(1.2); */
+    }
+    100%{
+        background-position-x: 1000px;
+        /* transform: scale(0.8); */
+    }
+}
+@keyframes rotate-earth{
+    0%{
+        background-position-x: 0px;
+       
+    }
+    100%{
+        background-position-x: 1000px;
+   
+    }
+}
+
+
+.orbit{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    animation: rotate-orbit 30s linear infinite;
+}
+.orbit::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://www.picng.com/upload/moon/png_moon_6576.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 20px;
+    right: 20px;
+
+}
+
+@-webkit-keyframes rotate-orbit {
+    100%{
+        transform: translate(-50% , -50%) rotate(360deg);
+        
+        
+    }
+
+}
+@keyframes rotate-orbit {
+    100%{
+        transform: translate(-50% , -50%) rotate(360deg);
+        
+        
+    }
+
+}
